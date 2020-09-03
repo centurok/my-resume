@@ -65,7 +65,9 @@
   }
 
       body {
-      font-family: var(--font-main);     
+      font-family: var(--font-main);
+      width: 100%;     
+      max-width: 100%;
       }
 
       /*COMMON*/
@@ -82,6 +84,7 @@
         padding: 20px 35px 20px 35px;
         outline: none;
         border: none;
+        cursor: pointer;
       }
 
       .container {
@@ -410,6 +413,10 @@
 
       /* TEAM PROJECTS */
 
+      .team-projects .container {
+        padding-bottom: 0;
+      }
+
       .team-projects-title {
         color: var(--txt-c-dark);
         position: relative;
@@ -426,6 +433,7 @@
         color: var(--txt-c-grey-light);
         z-index: -1;
         box-sizing: border-box;
+        overflow-x: hidden;
       }
 
       .team-project-name {
@@ -433,4 +441,112 @@
         font-weight: normal;
         font-size: 17px;
         line-height: 150%;
+      }
+
+      /* CALLBACK FORM SECTION */
+
+      .callback-form-container {
+        background: var(--c-dark);
+        padding: 35px 30px 40px 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .callback-form-title {
+        color: var(--txt-c-light);
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 29px;
+        text-align: center;
+        text-transform: uppercase;
+        width: 260px;
+        margin: 0 0 20px 0;
+      }
+
+      .callback-form-descr {
+        font-weight: normal;
+        font-size: 17px;
+        line-height: 150%;
+        text-align: center;
+        color: var(--txt-c-light);
+        width: 260px;
+        margin: 0 0 30px 0;
+      }
+
+      .callback-form-input {
+        background: transparent;
+        border: none;
+        outline: none;
+        padding: 10px 10px 15px 10px;
+        text-align: center;
+        border-bottom: 1px solid var(--c-grey-blue);
+        color: var(--txt-c-light);
+        margin-bottom: 30px;
+      }
+
+      /* CALCULATE FORM */
+
+      .calculator {
+        background: var(--c-dark);
+      }
+
+      .calculator-title {
+        font-weight: bold;
+        font-size: 35px;
+        line-height: 42px;
+        text-align: center;
+        text-transform: uppercase;
+        color: var(--txt-c-light);
+        margin-top: 20px;
+        width: 270px;
+        margin-bottom: 20px;
+      }
+
+      .calculator-icon {
+        width: 195px;
+      }
+
+      .calculator-descr {
+        
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 150%;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 0 0 30px 0;
+      }
+      
+      .calculator-descr span {
+        background: var(--c-accent);
+        padding: 5px;
+      }
+
+      .calculator-descr .calculator-descr-accent {
+        padding: 5px 10px;
+      }
+      .calculator-form {
+        background: var(--c-light);
+        padding: 30px 25px;
+      }
+
+      .calculator-text {
+        font-size: 17px;
+        line-height: 150%;
+        text-align: center;
+        color: var(--txt-c-light);
+        margin: 20px 0 30px 0;
+      }
+
+      .calculator-form-title {
+        color: var(--txt-c-dark);
+        margin-bottom: 15px;
+      }
+
+      .calculator-form-input {
+        display: flex;
+        flex-direction: column;
+        margin: 30px;
       }
