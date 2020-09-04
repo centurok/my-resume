@@ -508,6 +508,9 @@
       .calculator-icon {
         width: 195px;
       }
+      .calculator .container {
+        padding-bottom: 75px;
+      }
 
       .calculator-descr {
         
@@ -541,12 +544,128 @@
       }
 
       .calculator-form-title {
+        font-weight: bold;
+        font-size: 17px;
+        line-height: 135%;
         color: var(--txt-c-dark);
         margin-bottom: 15px;
+        margin-top: 0px;
       }
 
       .calculator-form-input {
         display: flex;
         flex-direction: column;
-        margin: 30px;
+        margin-bottom: 30px;
       }
+
+      .calculator-form-input-field {
+        margin-right: 10px;
+      }
+
+      .calculator-form-select {
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid var(--c-grey-light);
+        padding: 5px 0 17px 0;
+      }
+
+      .calculator-form-input-radio-container {
+        display: flex;
+        align-items: center;
+      }
+      .calculator-form-input-label {
+        margin-right: 15px;
+        font-weight: normal;
+        font-size: 17px;
+        line-height: 150%;
+        color: var(--txt-c-dark);
+      }
+      
+      .calculator-form-total-cost {
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 150%;
+        color: var(--txt-c-dark);
+        margin: 0px;
+      }
+
+      .calculator-form-total {
+        font-weight: bold;
+        font-size: 17px;
+        line-height: 135%;
+        color: var(--txt-c-dark);
+        margin: 0px;
+      }
+
+      /* FOOTER-INFORMATION */
+
+      .footer-name {
+        font-weight: bold;
+        font-size: 17px;
+        line-height: 150%;
+        text-align: center;
+        margin: 30px 30px 0 30px;
+        color: var(--txt-c-dark);
+      }
+
+      .footer-professional-name {
+        font-weight: normal;
+        font-size: 17px;
+        line-height: 150%;
+        text-align: center;
+        margin: 0 30px 20px 30px;
+        color: var(--txt-c-grey);
+      }
+
+      .footer-tel {
+        font-weight: bold;
+        font-size: 17px;
+        line-height: 150%;
+        color: var(--txt-c-dark);
+      }
+      
+      .footer-tel-container {
+        margin: 0 30px 15px 30px;
+        text-align: center;
+      }
+
+      .footer-mail {
+        font-weight: normal;
+        font-size: 17px;
+        line-height: 150%;
+        color: var(--txt-c-dark);
+      }
+
+      .footer-mail-container {
+        margin: 0 30px 30px 30px;
+        text-align: center;
+      }
+
+      .fa-github-square {
+        font-size: 25px;
+        margin: 0 33px 48px 0;
+      }
+      
+      .fa-linkedin {
+        font-size: 25px;
+        margin: 0 33px 48px 0;
+      }
+
+      .fa-facebook-square {
+        font-size: 25px;
+        margin: 0 33px 48px 0;
+      }
+
+      .fa-instagram {
+        font-size: 25px;
+        margin: 0 0 48px 0;
+      }
+      
+      .footer-icon {
+        text-align: center;
+
+      }
+
+
+
+
