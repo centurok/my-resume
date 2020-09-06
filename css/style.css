@@ -276,7 +276,9 @@
       }
 
       .my-answer-close-btn {
-        
+        padding-top: 170px;
+        padding-right: 15px;
+        color: var(--c-grey);
       }
 
       /* FRONT Page*/
@@ -582,6 +584,7 @@
       /* TEAM PROJECTS */
       .team-projects {
         position: relative;
+        overflow: hidden;
       }
 
       .team-projects .container {
@@ -603,7 +606,6 @@
         text-transform: uppercase;
         color: var(--txt-c-grey-light);
         z-index: -1;
-        
       }
 
       .team-project-name {
