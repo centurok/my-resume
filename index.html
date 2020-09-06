@@ -5,7 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <style>
+        .modal {
+            display: none;
+        }
+    </style>
     <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/choices.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -23,7 +29,7 @@
             </a>
             <div class="navigtion-part">
                 <a href="" class="hire-me-btn"> — HIRE ME</a>
-                <a href="" class="mobile-menu">
+                <a href="" class="mobile-menu" id="mobile-menu-btn">
                     <i class="fas fa-bars"></i>
             </a>
             </div>
@@ -42,7 +48,7 @@
 
             <p class="front-page-my-dicr"About me in 2 minutes>About me in 2 minutes</p>
 
-    <button class="front-page-my-video-btn">
+    <button class="front-page-my-video-btn" id="my-video-btn">
         <i class="fas fa-play"></i>
         PLAY
     </button>
@@ -116,7 +122,7 @@
 
 </div>
    </section>
-   <section class="about">
+   <section class="about" id="about">
        <div class="container container-left">
            <h3 class="section-title about-title">I code things from scratch_</h3>
            <p class="about-descr">
@@ -135,7 +141,7 @@
        </div>
    </section>
   
-  <section class="personal-projects">
+  <section class="personal-projects" id="projects">
       <div class="container">
           <h3 class="section-title personal-projects-title">My personal _projects</h3>
           <div class="personal-project-item">
@@ -203,9 +209,10 @@
       </div>
   </section>
   <section class="team-projects">
-    <div class="container">
+    <span class="team-projects-title-bgd">TEAM</span>
+    <div class="container team-projects-container">
         <h3 class="section-title team-projects-title">
-            <span class="team-projects-title-bgd">TE</span>
+            
             Teamwork _projects
         </h3>
         <div class="personal-project-item">
@@ -254,7 +261,7 @@
     </div>
 </section>
 
-<section class="calculator">
+<section class="calculator" id="calculator">
     <div class="container">
         <h3 class="calculator-title">Calculate_ the cost of a future project</h3>
         <p class="calculator-descr">
@@ -267,46 +274,46 @@
 
         <form action="" class="calculator-form">
             <div class="calculator-form-input">
-                <label for="calculator-form-website-type " class="calculator-form-title">What should be done:</label>
+                <label for="calculator-form-website-type" class="calculator-form-title">What should be done:</label>
                 <select name="website-type" id="calculator-form-website-type" class="calculator-form-select">
-                    <option value="Landing-page">Landing page</option>
-                    <option value="Website">Website</option>
-                    <option value="CMS">CMS</option>
-                    <option value="Portal" selected>Portal</option>
-                    <option value="e-shop">E-shop</option>
+                    <option value="Landing-page:600$">Landing page</option>
+                    <option value="Website:700$">Website</option>
+                    <option value="CMS:800$">CMS</option>
+                    <option value="Portal:900$" selected>Portal</option>
+                    <option value="e-shop:1000$">E-shop</option>
                 </select>
             </div>
 
             <div class="calculator-form-input">
                 <label for="calculator-form-technologies" class="calculator-form-title">Choose preferred technologies</label>
-                <select name="technologies" id="calculator-form-technologies" class="calculator-form-select>
-                    <option value="css">CSS</option>
-                    <option value="html">HTML</option>
-                    <option value="js">JS</option>
-                    <option value="react">React</option>
-                    <option value="angular">Angular</option>
-                    <option value="php">PHP</option>
+                <select name="technologies" id="calculator-form-technologies" class="calculator-form-select" multiple>
+                    <option value="css:300$" selected>CSS</option>
+                    <option value="html:400$" selected>HTML</option>
+                    <option value="js:500$" selected>JS</option>
+                    <option value="react:600$">React</option>
+                    <option value="angular:700$">Angular</option>
+                    <option value="php:800$">PHP</option>
                 </select>
             </div>
-            <div class="calculator-form-input">
+            <div class="calculator-form-input" id="calculator-form-shopping-cart">
                 <label for="" class="calculator-form-title">Personal account and shopping cart:</label>
                 
                 <div class="calculator-form-input-radio-container">
-                    <input type="radio" class="calculator-form-input-field" id="calculator-form-input-cart-yes" name="cart-yes">
+                    <input type="radio" class="calculator-form-input-field" id="calculator-form-input-cart-yes" name="cart" value="yes" checked>
                     <label for="calculator-form-input-cart-yes" class="calculator-form-input-label">Yes</label>
                     
-                    <input type="radio" class="calculator-form-input-field" id="calculator-form-input-cart-no" name="cart-no">
+                    <input type="radio" class="calculator-form-input-field" id="calculator-form-input-cart-no" name="cart" value="no">
                     <label for="calculator-form-input-cart-no" class="calculator-form-input-label">No</label>
                 </div>
             </div>
             
-            <div class="calculator-form-input">
+            <div class="calculator-form-input" id="calculator-form-email">
                 <label for="" class="calculator-form-title">Requests reception on your email:</label>
                 <div class="calculator-form-input-radio-container">
-                    <input type="radio" class="calculator-form-input-field" id="calculator-form-input-reception-yes" name="cart-yes">
+                    <input type="radio" class="calculator-form-input-field" id="calculator-form-input-reception-yes" name="reception" value="yes" checked>
                     <label for="calculator-form-input-reception-yes" class="calculator-form-input-label">Yes</label>
 
-                    <input type="radio" class="calculator-form-input-field" id="calculator-form-input-reception-no" name="cart-no">
+                    <input type="radio" class="calculator-form-input-field" id="calculator-form-input-reception-no" name="reception" value="no">
                     <label for="calculator-form-input-reception-no" class="calculator-form-input-label">No</label>
                 </div>
             </div>
@@ -320,7 +327,7 @@
     </div>
 </section>
 
-<section class="footer">
+<section class="footer" id="contacts">
     <p class="footer-name">Bilous Vasil</p>
     <p class="footer-professional-name">Frontend Developer</p>
     <div class="footer-tel-container"><a href="tel:+380987617658" class="footer-tel">+38 (098) 761 79 58</a></div>
@@ -333,7 +340,51 @@
             <i class="fab fa-instagram"></i>
         </div>
 </section>
+<!-- MODALS -->
+<div class="modals-wrapper">
+   
+    <!-- MOBILE MENU -->
+    <div class="modal modal-mobile-menu" id="mobile-menu">
+        <div class="modal-mobile-content">
+            <div class="container mobile-menu-container">
+                <i class="fas fa-times modal-close-btn mobile-menu-close-btn"></i>
+                <nav class="mobile-menu-items">
+                    <a href="#about" class="mobile-menu-item">ABOUT</a>
+                    <a href="#projects" class="mobile-menu-item">PROJECTS</a>
+                    <a href="#calculator" class="mobile-menu-item">COST CALCULATOR</a>
+                    <a href="#contacts" class="mobile-menu-item">CONTACTS</a>
+                </nav>
+                <div class="mobile-menu-contacts">
+                    <a href="tel:+380987617658" class="mobile-menu-tel">+38 (098) 761 79 58</a>
+                    <a href="mailto:centurok@gmail.com" class="mobile-menu-mail">centurok@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal-area-bgd" id="my-video-modal">
+        <div class="my-video-container">
+            <i class="fas fa-times modal-close-btn my-video-close-btn"></i>
+            <video class="my-video-content modal-area-content" src="video.mp4" controls></video>
+        </div>
+    </div>
+
+    <div class="modal modal-active">
+        
+        <div class="my-answer-container">
+            <i class="fas fa-times modal-close-btn my-answer-close-btn"></i>
+            <h3 class="my-answer-thanks">{Thanks}</h3>
+            <p class="my-answer-request">I've received your request/</p>
+            <p class="my-answer-soon">I will contact you soon =)</p>
+         </div>
+    </div>
+
+</div>
+    
 
 
+<script src="js/choices.min.js"> </script>
+<script src="js/calculator.js"></script>
+<script src="js/modals.js"></script>
 </body>
 </html>
