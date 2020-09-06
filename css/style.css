@@ -217,7 +217,7 @@
        /* MOBILE MENU MODAL */
       
        .my-video-content {
-        width: 100%;
+        width: 90%;
       }
 
       .my-video-container {
@@ -284,8 +284,8 @@
 
       /* FRONT Page*/
       .front-page {
-      width: 100%;
-      background: var(--c-dark);         
+        width: 100%;
+        background: var(--c-dark);         
       }
 
       .front-page-my-name {
