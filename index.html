@@ -36,7 +36,7 @@
                     </a>
                 </div>
             </nav>
-            <h1 class="front-page-my-name">[Alex Tur]</h1>
+            <h1 class="front-page-my-name">[Bilous Vasil]</h1>
 
             <h2 class="front-page-profession">{Frontend} _DEVELOPER</h2>
 
@@ -162,7 +162,7 @@
                     <i class="fas fa-laptop-code personal-project-icon"></i>
                     Technology: HTML5, CSS3, JS
                 </p>
-                <button class="personal-project-btn accent-btn">More details —</button>
+                <button class="personal-project-btn accent-btn" id="personal-project-full-stack-btn">More details —</button>
             </div>
             <div class="personal-project-item">
                 <div class="personal-project-item-container">
@@ -178,7 +178,7 @@
                     <span>Technology: HTML, CSS,</span>
                     <span class="personal-project-name-item"> JavaScript, PHP</span>
                 </p>
-                <button class="personal-project-btn accent-btn">More details —</button>
+                <button class="personal-project-btn accent-btn" id="personal-project-wedding-project-btn">More details —</button>
             </div>
             <div class="personal-project-item">
                 <div class="personal-project-item-container">
@@ -193,7 +193,7 @@
                     <i class="fas fa-laptop-code personal-project-icon"></i>
                     Technology: React.js, Node.js
                 </p>
-                <button class="personal-project-btn accent-btn">More details —</button>
+                <button class="personal-project-btn accent-btn" id="personal-project-pro-test-btn">More details —</button>
             </div>
             <div class="personal-project-item">
                 <div class="personal-project-item-container">
@@ -209,7 +209,7 @@
                     <span>Technology: HTML, CSS,</span>
                     <span class="personal-project-name-item"> JavaScript, Wordpress</span>
                 </p>
-                <button class="personal-project-btn accent-btn">More details —</button>
+                <button class="personal-project-btn accent-btn" id="personal-project-goit-btn">More details —</button>
             </div>
         </div>
     </section>
@@ -233,7 +233,7 @@
                     <i class="fas fa-laptop-code personal-project-icon"></i>
                     React.js, Node.js
                 </p>
-                <button class="personal-project-btn accent-btn">More details —</button>
+                <button class="personal-project-btn accent-btn" id="team-project-questify-btn">More details —</button>
             </div>
             <div class="personal-project-item">
                 <div class="personal-project-item-container">
@@ -248,20 +248,39 @@
                     <i class="fas fa-laptop-code personal-project-icon"></i>
                     React.js, Node.js
                 </p>
-                <button class="personal-project-btn accent-btn">More details —</button>
+                <button class="personal-project-btn accent-btn" id="team-project-it-test-btn">More details —</button>
             </div>
         </div>
     </section>
 
     <section class="callback-form">
         <div class="container">
-            <form action="" class="callback-form-container">
+            <form action="" class="callback-form-container" id="callback-form">
                 <h3 class="callback-form-title">/Are you minding [a project?]</h3>
                 <p class="callback-form-descr">Leave a request to discuss the task and technical requirements</p>
-                <input type="text" class="callback-form-input" placeholder="Name">
-                <input type="email" class="callback-form-input" placeholder="Email">
-                <input type="tel" class="callback-form-input" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Phone">
-                <input type="submit" class="callback-form-submite accent-btn" value="Discuss the project  —">
+                <input 
+                    type="text" 
+                    class="callback-form-input" 
+                    placeholder="Name"
+                    id="callback-form-name-input"
+                />
+                <input 
+                    type="email" 
+                    class="callback-form-input" 
+                    placeholder="Email"
+                    id="callback-form-email-input"
+                />
+                <input 
+                    type="tel" 
+                    class="callback-form-input" 
+                    placeholder="+38 (0__) ___-__-__"
+                    id="callback-form-tel-input"
+                />
+                <input 
+                    type="submit" 
+                    class="callback-form-submite accent-btn" 
+                    value="Discuss the project  —"
+                />
             </form>
         </div>
     </section>
@@ -382,23 +401,24 @@
             </div>
         </div>
 
-        <div class="modal" id="request-received">
-            <i class="fas fa-times modal-close-btn my-answer-close-btn"></i>
-            <div class="my-answer-container">
-                
-                <h3 class="my-answer-thanks">{Thanks}</h3>
-                <p class="my-answer-request">I've received your request/</p>
-                <p class="my-answer-soon">I will contact you soon =)</p>
+        <div class="modal modal-request-received modal-area-bgd" id="request-received">
+            
+            <div class="request-received-container modal-area-content">
+                <i class="fas fa-times modal-close-btn"></i>
+                <h3 class="request-received-title">{Thanks}</h3>
+                <p class="request-received-primary-msg">I've received your request/</p>
+                <p class="request-received-secondary-msg">I will contact you soon =)</p>
             </div>
         </div>
 
         <!-- Personal Project Full Stack -->
 
-        <div class="modal project-modal modal-active">
-            <div class="project-modal-container">
+        <div class="modal project-modal modal-area-bgd" id="personal-project-full-stack">
+            <div class="project-modal-container modal-area-content">
+                <div class="project-modal-scrollable">
                 <i class="fas fa-times modal-close-btn"></i>
 
-                <img class="ss" src="img/projects/personal/full-stack.jpg" alt="full stack project image 1">
+                <img class="project-modal-img" src="img/projects/personal/full-stack.jpg" alt="full stack project image 1">
                
                 <a href="https://fullstackonline.goit.ua/" class="project-modal-title">Goit Full Stack разработчик</a>
 
@@ -408,12 +428,124 @@
                 </p>
 
                 <p class="project-modal-text"> 
-                    Также на сайте добавлена форма обратной связи, соцсети и возможность посмотреть видео-отзывы выпускников, не уходя на внешние ресурсы. Компактно и в доступной форме дана вся информация о  курсе, преподавателях и процессе обучения.
+                    Также на сайте добавлена форма обратной связи, соцсети и возможность посмотреть видео-отзывы выпускников, не уходя на внешние ресурсы. 
+                    Компактно и в доступной форме дана вся информация о  курсе, преподавателях и процессе обучения.
                     Формат сайта подходит для небольших компаний или раскрытия информации о конкретном продукте."</p>
 
-
+                </div>
             </div>
         </div>
+
+        <!-- Personal Project WEDDING -->
+
+        <div class="modal project-modal modal-area-bgd" id="personal-project-wedding-project">
+            <div class="project-modal-container modal-area-content">
+                <div class="project-modal-scrollable">
+                    <i class="fas fa-times modal-close-btn"></i>
+
+                    <img class="project-modal-img" src="img/projects/personal/wedding.jpg" alt="wedding project image 1">
+                
+                    <a href="https://www.beeruza.com.ua/" class="project-modal-title">Beeruza - свадебные пригласительные и аксессуары</a>
+
+                    <p class="project-modal-text">
+                        "Интернет-магазин свадебных принадлежностей.
+                        Сайт предназначен для подготовки к свадьбе. Он экономит время и позволяет купить все аксессуары для свадьбы в одном месте: приглашения, декор, открытки, планер."
+                    </p>
+
+                    <p class="project-modal-text"> 
+                        Также можно заказать звонок и задать все вопросы по телефону. 
+                        Чтобы приобрести выбранные товары из нужно положить в корзину и оплатить удобным способом. Формат сайта подходит для бизнеса и продажи товаров.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Personal Project PRO TEST -->
+
+        <div class="modal project-modal modal-area-bgd" id="personal-project-pro-test">
+            <div class="project-modal-container modal-area-content">
+                <div class="project-modal-scrollable">
+                    <i class="fas fa-times modal-close-btn"></i>
+
+                    <img class="project-modal-img" src="img/projects/personal/pro-test.jpg" alt="pro-test project image 1">
+                
+                    <a href="https://pro-test.goit.co.ua/" class="project-modal-title">Pro test - техническая подготовка QA</a>
+
+                    <p class="project-modal-text">
+                        "Веб-приложение Pro Test поможет начинающему и опытному QA-инженеру оценить уровень своих знаний. 
+                        <br>В данном приложении реализована регистрация и логинизация пользователя через google account, а также через e-mail и пароль. 
+                        <br>После чего пользователь может пройти тест и увидеть его результаты.
+                </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Personal Project GOIT -->
+
+        <div class="modal project-modal modal-area-bgd" id="personal-project-goit">
+            <div class="project-modal-container modal-area-content">
+                <div class="project-modal-scrollable">
+                    <i class="fas fa-times modal-close-btn"></i>
+
+                    <img class="project-modal-img" src="img/projects/personal/goit.jpg" alt="goit project image 1">
+                
+                    <a href="https://goit.ua/" class="project-modal-title">GoIT - курсы программирования</a>
+
+                    <p class="project-modal-text">
+                        Многостраничный сайт с использованием HTML, CSS и JavaScript. 
+                        На сайте есть форма обратной связи и pop-up, который появляется через 30 секунд вашего присутствия на сайте. 
+                        Также на сайте есть отдельная страница курсов, с последующим переходом на лендинг каждого отдельного курса.                         
+                    </p>
+                        
+                    <p class="project-modal-text"> 
+                        Постоянная рубрика Journal сделана в виде блога с полезной информацией для начинающих разработчиков. 
+                        На сайте есть отзывы выпускников, контакты для связи и события компании. 
+                        Кнопка в правом углу переводит пользователя в телеграм-бот, где он может создать свой собственный сайт с автопроверкой заданий.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+               <!-- Team Project QUESTIFY -->
+
+               <div class="modal project-modal modal-area-bgd" id="team-project-questify">
+                <div class="project-modal-container modal-area-content">
+                    <div class="project-modal-scrollable">
+                        <i class="fas fa-times modal-close-btn"></i>
+        
+                        <img class="project-modal-img" src="img/projects/team/questify.jpg" alt="Questify project image 1">
+                    
+                        <a href="https://questify.goit.co.ua/" class="project-modal-title">Questify - turn your life into a thrilling game</a>
+        
+                        <p class="project-modal-text">
+                            Увлекательное веб-приложение, которое призвано помочь превратить рутинные задачи в увлекательные квесты и захватывающие челенджи, 
+                            которые система сама ставит перед пользователем.
+                        </p>
+    
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Project Test IT -->
+
+            <div class="modal project-modal modal-area-bgd" id="team-project-it-test">
+                <div class="project-modal-container modal-area-content">
+                    <div class="project-modal-scrollable">
+                        <i class="fas fa-times modal-close-btn"></i>
+        
+                        <img class="project-modal-img" src="img/projects/team/it-test.jpg" alt="IT test project image 1">
+                    
+                        <a href="https://testit.co.ua/" class="project-modal-title">Тест на профессиональную личность в IT</a>
+        
+                        <p class="project-modal-text">
+                            Web-приложение, которое поможет родителям определиться к какой профессии в IT склонен их ребенок.
+                        </p>
+    
+                    </div>
+                </div>
+            </div>
 
     </div>
 
@@ -421,7 +553,9 @@
 
     <script src="js/choices.min.js"> </script>
     <script src="js/calculator.js"></script>
+    <script src="js/project-modals.js"></script>
     <script src="js/modals.js"></script>
+    <script src="js/callback-form.js"></script>
 </body>
 
 </html>

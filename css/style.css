@@ -238,48 +238,54 @@
         overflow: hidden;
       }
 
-      /* ANSWER MENU MODAL */
+      /* request received MODAL */
 
-      .my-answer-thanks {
+      .modal-request-received {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 10px;
+        box-sizing: border-box;
+      }
+
+      .request-received-title {
         font-weight: bold;
         font-size: 24px;
         line-height: 29px;
         text-transform: uppercase;
         color: var(--txt-c-accent);
-        padding: 80px 0 15px 0;
-        margin: 0;
-        text-align: center;
+        margin-bottom: 20px;
+        margin-top: 0px;
       }
 
-      .my-answer-request {
+      .request-received-primary-msg {
         font-weight: bold;
-        font-size: 26px;
-        line-height: 31px;
+        font-size: 36px;
+        line-height: 43px;
         text-align: center;
         text-transform: uppercase;
-        padding: 0 32px 17px 26px;
+        margin-bottom: 20px;
         color: var(--txt-c-dark);
-        margin: 0;
+        margin-top: 0px;
       }
 
-      .my-answer-soon {
+      .request-received-secondary-msg {
         font-weight: normal;
         font-size: 17px;
         line-height: 130%;
-        text-align: center;
-        padding: 0 60px 83px 60px;
+        width: 185px;
+        margin: 0px;
       }
 
-      .my-answer-container {
+      .request-received-container {
         background: var(--c-light);
-        margin: 174px 10px 0px 10px;
-        
-      }
-
-      .my-answer-close-btn {
-        padding-top: 170px;
-        padding-right: 15px;
-        color: var(--c-grey);
+        padding: 80px 10px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
       }
 
       /* Project modal */
@@ -294,8 +300,7 @@
 
       .project-modal-container {
         background: var(--c-light);
-        margin: 174px 10px 0px 10px;
-        padding: 45px 20px;
+        padding: 45px 0;
         text-align: left;
         display: flex;
         flex-direction: column;
@@ -303,6 +308,13 @@
         justify-content: center;
         position: relative;
         box-sizing: border-box;
+        height: 85%;
+      }
+
+      .project-modal-scrollable {
+        overflow-y: auto;
+        padding: 0 20px;
+        height: 100%;
       }
 
       .project-modal-title {
@@ -310,9 +322,10 @@
         font-size: 20px;
         line-height: 24px;
         text-transform: uppercase;
-        color: var(--c-dark);
-        margin: 25px 0;
+        color: var(--txt-c-dark);
         text-decoration: none;
+        display: block;
+        margin: 0 0 25px 0;
       }
 
       .project-modal-text {
@@ -324,7 +337,7 @@
 
       .project-modal-img {
         width: 100%;
-        margin: 20px 0 0 0;
+        margin-bottom: 30px;
       }
       
 
@@ -704,6 +717,9 @@
         border-bottom: 1px solid var(--c-grey-blue);
         color: var(--txt-c-light);
         margin-bottom: 30px;
+      }
+      .input-error-border {
+        border: 1px solid red;
       }
 
       /* CALCULATE FORM */
