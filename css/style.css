@@ -949,5 +949,50 @@
   padding-left: 8px;
 }
 
+@media only screen and (min-width: 640px) {
+
+  .front-page-my-name {
+    font-size: 36px;
+    line-height: 43px;
+    margin-bottom: 0px;
+  }
+
+  .front-page-profession {
+    margin-top: 20px;
+    margin: 20px 0 30px 0;
+    font-size: 55px;
+    line-height: 66px;
+  }
+
+  .profession-part-1 {
+    margin-right: 40px;
+  }
+
+  .profession-part-2 {
+    margin-left: 40px;
+  }
+
+  .front-page-description {
+    font-size: 17px;
+    line-height: 150%;
+    width: 385px;
+    margin: 0 0 40px 0;
+  }
+
+  .front-page-about-me-container {
+
+  }
+
+  .front-page-my-info {
+    display: flex;
+    align-items: center;
+  }
+
+  .front-page-my-photo {
+    width: 140px;
+    margin-right: 35px;
+  }
+
+}
 
 
