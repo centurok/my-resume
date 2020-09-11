@@ -73,13 +73,21 @@
 
       body {
       font-family: var(--font-main);
-      width: 100%;     
-      max-width: 100%;
+      box-sizing: border-box;
       }
 
       /*COMMON*/
 
+    .tablet-element {
+      display: none;
+    }
+
+    .desktop-element {
+      display: none;
+    }
+
       
+
       .accent-btn {
         background: var(--c-accent);
         font-weight: bold;
@@ -352,9 +360,8 @@
         font-size: 26px;
         line-height: 31px;
         text-transform: uppercase;
-        color: var(--c-accent);
+        color: var(--txt-c-accent);
         text-align: center;
-        color: var(--c-accent);
         margin: 35px 0 10px 0;
       }
 
@@ -376,7 +383,7 @@
         margin-bottom: 20px;
       }
 
-      .navigtion {
+      .navigation {
         width: 100%;
         display: flex;
         flex-direction: row;
@@ -395,8 +402,7 @@
         font-size: 15px;
         line-height: 18px;
         letter-spacing: 0.05em;
-        text-transform: uppercase;
-        color: var(--c-accent);
+        color: var(--txt-c-accent);
         text-decoration: none;
         margin: 0 20px 0 0;
       }
@@ -405,7 +411,6 @@
         width: 30px;
         height: 30px;
         background: var(--c-accent);
-        display: block;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -424,6 +429,18 @@
       .front-page-my-photo {
         width: 90px;
         margin-bottom: 20px;
+      }
+
+      .front-page-my-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .front-page-about-me-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
 
       .front-page-my-dicr {
@@ -452,7 +469,7 @@
         margin-right: 7px;
       }
 
-      .front-page-from-laptop {
+      .front-page-laptop {
         width: 250px;
         margin-bottom: 40px;
       }
@@ -683,7 +700,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 100%;
         box-sizing: border-box;
       }
 
@@ -951,6 +967,18 @@
 
 @media only screen and (min-width: 640px) {
 
+  .container {
+    padding-bottom: 100px;
+    min-width: 640px;
+  }
+  .mobile-element {
+    display: none;
+  }
+
+  .tablet-element {
+    display: block;
+  }
+
   .front-page-my-name {
     font-size: 36px;
     line-height: 43px;
@@ -985,14 +1013,124 @@
 
   .front-page-my-info {
     display: flex;
+    flex-direction: row;
     align-items: center;
+    margin-bottom: 60px;
   }
 
   .front-page-my-photo {
     width: 140px;
     margin-right: 35px;
+    margin-bottom: 0px;
   }
 
+  .front-page-laptop {
+    width: 450px;
+    margin-bottom: 90px;  
+  }
+
+  .about .container {
+    position: relative;
+  }
+  
+
+  .about-img-text {
+    position: absolute;
+    right: 22px;
+    top: 228px;
+    font-size: 200px;
+    line-height: 240px
+  }
+
+  .about-img {
+    width: 361px;
+    height: 390px;
+    left: -105px;
+    top: 70px;
+  }
+
+  .about-img-container {
+    margin-bottom: 0px;
+  }
+
+  .about-title {
+    font-size: 50px;
+    line-height: 60px;
+    width: 600px;
+    margin-bottom: 30px;
+  }
+  
+  .about-descr {
+    font-size: 36px;
+    line-height: 43px;
+    margin-bottom: 60px;
+  }
+
+  .about-text:last-child {
+    width: 320px;
+    margin-bottom: 84px;
+  }
+
+  .team-projects-title,
+  .personal-projects-title {
+    font-size: 50px;
+    line-height: 60px;
+    text-align: left;
+    width: 400px;
+  }
+  .personal-project-item,
+  .personal-project-item {
+    margin: 0 25px 40px 25px;
+  }
+  .callback-form .container,
+  .personal-projects .container,
+  .team-projects .container {
+    align-items: normal;
+  }
+
+  .team-projects-title-bgd {
+    font-size: 200px;
+    line-height: 240px;
+    top: 19px;
+    left: 57px;
+  }
+
+  .callback-form-container {
+    padding: 75px 30px 80px 30px;
+  }
+
+  .callback-form-title {
+    font-size: 36px;
+    line-height: 43px;
+    width: 386px;
+  }
+
+  .callback-form-submite,
+  .callback-form-input,
+  .callback-form-descr {
+    width: 386px;
+    box-sizing: border-box;
+  }
+
+  .callback-form-submite {
+    margin-top: 10px;
+  }
+  .calculator .container {
+    align-items: normal;
+  }
+
+  .calculator-title {
+    width: 605px;
+    font-size: 50px;
+    line-height: 60px;
+    text-align: left;
+  }
+
+  .calculator-descr {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 
