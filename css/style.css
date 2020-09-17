@@ -80,11 +80,11 @@
       /*COMMON*/
 
     .tablet-element {
-      display: none !important;
+      display: none;
     }
 
     .desktop-element {
-      display: none !important;
+      display: none;
     }
 
     .mobile-element {
@@ -1036,7 +1036,11 @@
   }
 
   .tablet-element {
-    display: block !important;
+    display: block;
+  }
+
+  .mobile-menu {
+    display: flex;
   }
 
   .front-page-my-name {
